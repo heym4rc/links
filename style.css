@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--gray);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 14.5rem auto 0;
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
+}
+
+ul a {
+  clip-path: circle();
+}
+
+ul a:hover {
+  transform: translateY(-6px);
+}
+
+/* ================== MEDIA QUERY ================== */
+
+/* extra large devices: 1200 > */
+@media (min-width: 1200px) {
+  main {
+    background: url(images/background-desk.svg) no-repeat center/cover;
+  }
+
+  .container {
+    margin-top: 270px;
+  }
+
+  .strip {
+    position: absolute;
+    width: 4rem;
+    height: 12rem;
+    left: 48.4%;
+    top: 0;
+    background: linear-gradient(121.24deg, #ff008e -15.25%, #ffcd1e 111.89%);
+    z-index: 1;
+  }
+
+  .break {
+    position: absolute;
+    width: 5rem;
+    height: 0.5rem;
+    left: 47.95%;
+    top: 11.8rem;
+    background: #121214;
+  }
+}
+
+/* large devices: 1023 > */
+@media (min-width: 1023px) {
+}
+
+/* large devices:992 > */
+@media (min-width: 992px) {
+}
+
+/* medium devices: 767 > */
+@media (min-width: 767px) {
+}
